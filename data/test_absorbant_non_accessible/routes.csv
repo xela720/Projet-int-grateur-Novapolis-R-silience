@@ -1,0 +1,7 @@
+u,v,temps_normal,temps_pointe,statut,type_voie,capacite
+A,B,4.0,4.0,ouvert,route,1000
+B,C,2.0,2.0,ouvert,route,1000
+A,C,7.0,7.0,ouvert,route,1000
+X,Y,1.0,1.0,ouvert,cycle,1000
+Y,Z,2.0,2.0,ouvert,cycle,1000
+Z,X,-5.0,-5.0,ouvert,cycle,1000

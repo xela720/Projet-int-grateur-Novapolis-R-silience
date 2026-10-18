@@ -1,0 +1,15 @@
+u,v,temps_normal,temps_pointe,statut,type_voie,capacite
+S1,S2,5.0,8.0,ouvert,artere,1500
+S2,S1,5.0,8.0,ouvert,artere,1500
+S1,S3,7.0,12.0,ouvert,avenue,1200
+S3,S2,3.0,5.0,ouvert,rue_locale,800
+S2,S4,4.0,6.0,ouvert,rue_locale,800
+S4,S2,4.0,6.0,ouvert,rue_locale,800
+S4,S5,6.0,10.0,ouvert,artere,1400
+S5,S6,4.0,7.0,ouvert,rue_locale,700
+S6,S1,8.0,14.0,ouvert,artere,1300
+S1,S7,3.0,5.0,ouvert,boulevard,1800
+S7,S1,3.0,5.0,ouvert,boulevard,1800
+S7,S6,6.0,9.0,ouvert,rue_locale,900
+S3,S5,9.0,15.0,ouvert,artere,1100
+S8,S3,10.0,15.0,ouvert,rue_locale,500

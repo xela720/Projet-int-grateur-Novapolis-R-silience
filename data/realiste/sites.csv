@@ -1,0 +1,112 @@
+id,nom,type,longitude,latitude
+SITE_001,Caserne Châtelet (État-Major BSPP),caserne,2.3472,48.8575
+SITE_002,Hôpital Hôtel-Dieu Paris,hopital,2.349,48.8546
+SITE_003,Hub Core Châtelet - Les Halles,telecom,2.3458,48.8615
+SITE_004,Lycée Henri-IV,ecole,2.3481,48.8461
+SITE_005,Lycée Charlemagne,ecole,2.3608,48.8542
+SITE_006,Quartier Place des Vosges - Marais,quartier,2.3655,48.8556
+SITE_007,Quartier Hôtel de Ville,quartier,2.3522,48.8566
+SITE_008,Quartier Sainte-Chapelle (Cité),quartier,2.345,48.8554
+SITE_009,Quartier Musée du Louvre,quartier,2.3376,48.8606
+SITE_010,Quartier Beaubourg - Centre Pompidou,quartier,2.3522,48.8606
+SITE_011,Quartier Sentier - Rue Réaumur,quartier,2.349,48.8672
+SITE_012,Quartier Saint-Gervais,quartier,2.3556,48.8558
+SITE_013,Quartier Forum des Halles,quartier,2.348,48.8605
+SITE_014,Quartier Rue de Rivoli,quartier,2.356,48.856
+SITE_015,Quartier Port de l'Arsenal,quartier,2.367,48.851
+SITE_016,Quartier Parvis Notre-Dame,quartier,2.3499,48.853
+SITE_017,Quartier Place Dauphine - Pont Neuf,quartier,2.343,48.8566
+SITE_018,Quartier Domaine du Palais-Royal,quartier,2.3369,48.8638
+SITE_019,Quartier Église Saint-Merri,quartier,2.351,48.859
+SITE_020,Quartier Palais Brongniart (Bourse),quartier,2.3412,48.869
+SITE_021,Quartier Place des Victoires,quartier,2.34,48.866
+SITE_022,Quartier Grand Rex - Bonne-Nouvelle,quartier,2.3505,48.8705
+SITE_023,Quartier Arts-et-Métiers (CNAM),quartier,2.3585,48.866
+SITE_024,Quartier Marché des Enfants-Rouges,quartier,2.362,48.8635
+SITE_025,Quartier Fontaine Saint-Michel,quartier,2.344,48.853
+SITE_026,Caserne Montmartre - Carpeaux,caserne,2.3364,48.8906
+SITE_027,Hôpital Lariboisière,hopital,2.3533,48.8826
+SITE_028,Hub Télécom Gare du Nord,telecom,2.3553,48.8809
+SITE_029,Lycée Condorcet,ecole,2.3276,48.8752
+SITE_030,Collège-Lycée Jacques-Decour,ecole,2.3442,48.8814
+SITE_031,Quartier Basilique du Sacré-Cœur,quartier,2.3431,48.8867
+SITE_032,Quartier Gare de l'Est,quartier,2.359,48.8768
+SITE_033,Quartier Place Pigalle,quartier,2.337,48.8822
+SITE_034,Quartier Rue de la Chapelle,quartier,2.3595,48.885
+SITE_035,Quartier Barbès-Rochechouart,quartier,2.3499,48.8835
+SITE_036,Quartier La Goutte d'Or,quartier,2.354,48.8865
+SITE_037,Quartier Porte de Clignancourt,quartier,2.3445,48.898
+SITE_038,Quartier Grandes-Carrières - Cimetière Montmartre,quartier,2.332,48.889
+SITE_039,Quartier Porte de Saint-Ouen,quartier,2.328,48.8975
+SITE_040,Quartier Mairie du 18e (Jules Joffrin),quartier,2.345,48.8925
+SITE_041,Quartier Lamarck-Caulaincourt,quartier,2.3385,48.8898
+SITE_042,Quartier Marcadet-Poissonniers,quartier,2.3505,48.8915
+SITE_043,Quartier Place des Abbesses,quartier,2.3386,48.8845
+SITE_044,Quartier Place Blanche - Moulin Rouge,quartier,2.3323,48.8841
+SITE_045,Quartier Palais Garnier (Opéra),quartier,2.3316,48.8719
+SITE_046,Caserne Masséna (13e),caserne,2.3695,48.8218
+SITE_047,Hôpital Pitié-Salpêtrière,hopital,2.3644,48.8392
+SITE_048,Hub Télécom Place d'Italie,telecom,2.3558,48.8315
+SITE_049,Lycée Lavoisier,ecole,2.3385,48.8415
+SITE_050,Lycée Montaigne - Jardin du Luxembourg,ecole,2.3355,48.8458
+SITE_051,Quartier Mairie du 13e,quartier,2.355,48.831
+SITE_052,Quartier Manufacture des Gobelins,quartier,2.3525,48.836
+SITE_053,Quartier Place Victor et Hélène Basch (Alésia),quartier,2.327,48.828
+SITE_054,Quartier Cité Universitaire - Parc Montsouris,quartier,2.3385,48.822
+SITE_055,Quartier Olympiades - Tolbiac,quartier,2.366,48.827
+SITE_056,Quartier Porte d'Orléans,quartier,2.326,48.8205
+SITE_057,Quartier Place Denfert-Rochereau,quartier,2.3325,48.834
+SITE_058,Quartier Pôle Gare d'Austerlitz,quartier,2.366,48.842
+SITE_059,Quartier La Butte-aux-Cailles,quartier,2.3515,48.828
+SITE_060,Quartier Maison-Blanche,quartier,2.359,48.8235
+SITE_061,Quartier Bibliothèque François-Mitterrand (BNF),quartier,2.376,48.834
+SITE_062,Quartier Boulevard Auguste-Blanqui,quartier,2.344,48.8315
+SITE_063,Quartier Hôpital Cochin - Port-Royal,quartier,2.3395,48.8385
+SITE_064,Quartier Square René-Le Gall,quartier,2.35,48.8335
+SITE_065,Quartier Tour & Gare Montparnasse,quartier,2.32,48.8415
+SITE_066,Caserne Chaligny (12e),caserne,2.3842,48.8492
+SITE_067,Hôpital Saint-Antoine,hopital,2.3845,48.8504
+SITE_068,Hub Télécom Place de la Nation,telecom,2.3959,48.8484
+SITE_069,Lycée Hélène Boucher,ecole,2.4082,48.8475
+SITE_070,Lycée Paul Valéry,ecole,2.4115,48.8423
+SITE_071,Quartier Colonne de Juillet - Place de la Bastille,quartier,2.369,48.853
+SITE_072,Quartier Mairie du 11e - Place Léon Blum,quartier,2.38,48.858
+SITE_073,Quartier Parc de Belleville,quartier,2.385,48.871
+SITE_074,Quartier Cimetière du Père-Lachaise,quartier,2.393,48.8615
+SITE_075,Quartier Accor Arena - Parc de Bercy,quartier,2.3785,48.8385
+SITE_076,Quartier Ménilmontant,quartier,2.388,48.866
+SITE_077,Quartier Cour Saint-Émilion (Bercy Village),quartier,2.386,48.8325
+SITE_078,Quartier Place Félix Éboué (Daumesnil),quartier,2.395,48.8395
+SITE_079,Quartier Gare de Lyon - Tour de l'Horloge,quartier,2.3735,48.8445
+SITE_080,Quartier Avenue Ledru-Rollin,quartier,2.3745,48.851
+SITE_081,Quartier Marché d'Aligre,quartier,2.3815,48.8505
+SITE_082,Quartier Rue de Picpus,quartier,2.401,48.844
+SITE_083,Quartier Bel-Air - Coulée Verte,quartier,2.4085,48.84
+SITE_084,Quartier Église Saint-Germain de Charonne,quartier,2.4035,48.855
+SITE_085,Quartier Cours de Vincennes - Porte de Vincennes,quartier,2.413,48.847
+SITE_086,Caserne Dauphine (16e),caserne,2.2742,48.8688
+SITE_087,Hôpital Européen Georges-Pompidou,hopital,2.2736,48.8394
+SITE_088,Hub Télécom Place de l'Étoile,telecom,2.2965,48.8778
+SITE_089,Lycée Janson-de-Sailly,ecole,2.2779,48.8647
+SITE_090,Lycée Jean-Baptiste Say,ecole,2.2635,48.8449
+SITE_091,Quartier Esplanade du Trocadéro,quartier,2.288,48.8625
+SITE_092,Quartier Village de Passy,quartier,2.28,48.858
+SITE_093,Quartier Village d'Auteuil,quartier,2.266,48.848
+SITE_094,Quartier Palais des Congrès - Porte Maillot,quartier,2.283,48.8785
+SITE_095,Quartier Avenue des Champs-Élysées,quartier,2.308,48.87
+SITE_096,Quartier Monument Arc de Triomphe,quartier,2.295,48.8738
+SITE_097,Quartier Jardin du Ranelagh - La Muette,quartier,2.275,48.8585
+SITE_098,Quartier Place Victor Hugo,quartier,2.285,48.87
+SITE_099,Quartier Tour Eiffel - Champ-de-Mars,quartier,2.2945,48.8584
+SITE_100,Quartier Maison de Radio France,quartier,2.278,48.8525
+SITE_101,Quartier Porte de Saint-Cloud - Exelmans,quartier,2.261,48.841
+SITE_102,Quartier Pont Mirabeau (Rive Gauche),quartier,2.276,48.847
+SITE_103,Quartier Centre Beaugrenelle,quartier,2.2825,48.8485
+SITE_104,Quartier Rue de la Convention (15e),quartier,2.297,48.837
+SITE_105,Quartier Esplanade des Invalides,quartier,2.312,48.8565
+SITE_106,Poste Secours Bords de Marne (Saint-Maur),caserne,2.45,48.805
+SITE_107,Quartier Port de Bonneuil,quartier,2.465,48.785
+SITE_108,Centre Fret Plateforme Sud-Est,zone_logistique,2.47,48.775
+SITE_109,Station Épuration Presqu'île,infrastructure,2.485,48.765
+SITE_110,Refuge Butte Isolée,refuge,2.49,48.755
+SITE_111,Efrei Paris - Campus Villejuif,ecole,2.3637,48.7887

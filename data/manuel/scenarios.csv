@@ -1,0 +1,4 @@
+scenario_id,type_element,u,v,action,valeur
+scenario_normal,aucun,none,none,baseline,0
+scenario_fermeture_axe,route,S1,S2,fermer,0
+scenario_panne_fibre,fibre,S1,S2,fermer,0

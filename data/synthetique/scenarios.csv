@@ -1,0 +1,5 @@
+scenario_id,type_element,u,v,action,valeur
+scenario_normal,aucun,none,none,baseline,0
+scenario_coupure_multiple,route,SYNTH_0001,SYNTH_0448,fermer,0
+scenario_coupure_multiple,route,SYNTH_0002,SYNTH_0066,fermer,0
+scenario_panne_fibre,fibre,SYNTH_0001,SYNTH_0448,fermer,0
