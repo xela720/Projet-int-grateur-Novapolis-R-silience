@@ -1,2 +1,3 @@
 scenario_id,type_element,u,v,action,valeur
 scenario_normal,aucun,none,none,baseline,0
+scenario_neutralisation_cycle,arc,C,D,fermer,0

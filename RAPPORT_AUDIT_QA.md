@@ -169,7 +169,7 @@ Suite à l'audit critique et à l'analyse fine des positions spatiales, une refo
 
 ---
 
-## 6. Conclusion Finale & Notation Académique (Objectif 20/20)
+## 6. Conclusion Finale & Conformité Académique (Barème 20 points)
 
 L'audit confirme que **Novapolis** répond à 100% des exigences du cahier des charges :
 - **Pureté algorithmique :** Zéro dépendance à des bibliothèques de graphes externes (pas de NetworkX). Tout est implémenté en Python standard (`heapq`, `collections`, `csv`, `math`).

@@ -1,6 +1,6 @@
 """Suite complète de tests unitaires et d'intégration pour Novapolis Résilience.
 
-Couvre l'intégralité des fonctionnalités exigées pour la note de 20/20 :
+Couvre l'intégralité des fonctionnalités exigées par le cahier des charges officiel (20 points) :
 - Modélisation, validation des données et clonage strict (2 pts)
 - DFS/BFS, composantes connexes, cycles orientés et accessibilité (1 pt)
 - Dijkstra, Bellman-Ford, Floyd-Warshall et circuits absorbants (4 pts)
@@ -24,6 +24,7 @@ from src.data_manager import (
     FibreArete,
     GrapheRoutier,
     GrapheFibre,
+    Demande,
     charger_reseau,
     appliquer_scenario,
 )
@@ -42,6 +43,7 @@ from src.shortest_paths import (
     bellman_ford,
     floyd_warshall,
     reconstruire_chemin,
+    reconstruire_chemin_floyd_warshall,
     evaluer_demande_intervention,
     comparer_algorithmes_chemins,
 )
@@ -170,6 +172,74 @@ class TestPlusCourtsCheminsEtCircuitsAbsorbants(unittest.TestCase):
         self.assertEqual(ev["statut"], "accessible")
         self.assertEqual(ev["retard_absolu_min"], 1.0)
         self.assertGreater(ev["retard_relatif_pourcent"], 0.0)
+
+    def test_comparaison_trois_algorithmes_et_reconstruction(self):
+        """Vérifie la concordance exacte de Dijkstra, Bellman-Ford et Floyd-Warshall ainsi que la reconstruction."""
+        dossier_realiste = os.path.join(RACINE, "data", "realiste")
+        reseau_real = charger_reseau(dossier_realiste)
+        source, cible = "SITE_046", "SITE_111"
+
+        # 1. Dijkstra
+        dist_d, pred_d = dijkstra(reseau_real.routier, source, "temps_normal")
+        chem_d = reconstruire_chemin(pred_d, source, cible)
+
+        # 2. Bellman-Ford
+        res_bf = bellman_ford(reseau_real.routier, source, "temps_normal")
+        chem_bf = reconstruire_chemin(res_bf["predecesseurs"], source, cible)
+
+        # 3. Floyd-Warshall
+        res_fw = floyd_warshall(reseau_real.routier, "temps_normal")
+        chem_fw = reconstruire_chemin_floyd_warshall(res_fw["suivant"], res_fw["dist"], source, cible)
+
+        # Vérifications strictes
+        self.assertAlmostEqual(dist_d[cible], res_bf["distances"][cible], places=4)
+        self.assertAlmostEqual(dist_d[cible], res_fw["dist"][source][cible], places=4)
+        self.assertEqual(chem_d, chem_bf)
+        self.assertEqual(chem_d, chem_fw)
+        self.assertEqual(chem_d[0], source)
+        self.assertEqual(chem_d[-1], cible)
+
+    def test_retards_absolus_et_relatifs_pourcentage(self):
+        """Vérifie le calcul des retards absolus (+min) et relatifs (%) lors de perturbations."""
+        dossier_realiste = os.path.join(RACINE, "data", "realiste")
+        reseau_real = charger_reseau(dossier_realiste)
+        reseau_pert = appliquer_scenario(reseau_real, "scenario_fermeture_pont")
+        source, cible = "SITE_058", "SITE_079"
+
+        # Avant fermeture
+        dist_av, pred_av = dijkstra(reseau_real.routier, source, "temps_normal")
+        t_av = dist_av[cible]
+        chem_av = reconstruire_chemin(pred_av, source, cible)
+
+        # Après fermeture
+        dist_ap, pred_ap = dijkstra(reseau_pert.routier, source, "temps_normal")
+        t_ap = dist_ap[cible]
+        chem_ap = reconstruire_chemin(pred_ap, source, cible)
+
+        retard_abs = t_ap - t_av
+        retard_rel = (retard_abs / t_av) * 100.0
+
+        self.assertAlmostEqual(t_av, 1.79, places=2)
+        self.assertAlmostEqual(t_ap, 3.51, places=2)
+        self.assertAlmostEqual(retard_abs, 1.72, places=2)
+        self.assertAlmostEqual(retard_rel, 96.09, delta=0.5)
+        self.assertEqual(chem_av, ["SITE_058", "SITE_079"])
+        self.assertEqual(chem_ap, ["SITE_058", "SITE_047", "SITE_079"])
+
+    def test_alertes_inaccessibilite(self):
+        """Vérifie la détection et les alertes lorsque des sites sont inaccessibles."""
+        # 1. Site orphelin sans arc entrant (S8 dans data/manuel)
+        dist_s1, pred_s1 = dijkstra(self.reseau_manuel.routier, "S1", "temps_normal")
+        self.assertEqual(dist_s1["S8"], math.inf)
+        self.assertEqual(reconstruire_chemin(pred_s1, "S1", "S8"), [])
+
+        # 2. Évaluation de demande inaccessible
+        demande_inacc = Demande("D_INACC", "S8", None, "urgence", priorite=1)
+        ev = evaluer_demande_intervention(self.reseau_manuel.routier, self.reseau_manuel.routier, demande_inacc)
+        self.assertEqual(ev["statut"], "inaccessible")
+        self.assertIsNone(ev["cout_avant"])
+        self.assertIsNone(ev["retard_absolu_min"])
+        self.assertEqual(ev["chemin_avant"], [])
 
 
 class TestArbresCouvrants(unittest.TestCase):

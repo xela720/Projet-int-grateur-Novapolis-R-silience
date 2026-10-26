@@ -1,24 +1,44 @@
 # Novapolis Résilience : Planification des Secours et Réseau Urbain Résilient
 
-Projet intégrateur d'Algorithmique et Théorie des Graphes (ING-APP1-BDML).
-Conçu selon les standards stricts du génie logiciel : **zéro bibliothèque externe de graphes** (pas de NetworkX), 100 % bibliothèque standard Python (`csv`, `heapq`, `collections`, `math`, `random`, `time`, `copy`, `argparse`, `unittest`) et `matplotlib` exclusivement pour les rendus graphiques et benchmarks.
+> **Projet Intégrateur Majeur d'Algorithmique et Théorie des Graphes (EFREI Paris - S1 BDML)**  
+> **Cadre :** Projet académique conforme au cahier des charges officiel (`PROJET.pdf` — Barème 20 points)  
+> **Architecture :** 100 % Python Standard — **Strictement zéro bibliothèque externe de graphes** (aucun usage de NetworkX).
 
 ---
 
-## 1. Vue d'Ensemble & Architecture Logicielle
+## 1. Vue d'Ensemble & Dashboard Web Cartographique
 
-Le projet modélise la métropole de **Novapolis** à travers deux graphes distincts partageant les mêmes sommets :
-1. **Réseau Routier (Graphe orienté pondéré)** : Modélise les sens de circulation, carrefours, temps normaux et de pointe, capacités et statuts de fermeture.
-2. **Réseau de Fibre Optique (Graphe non orienté pondéré)** : Modélise les liaisons physiques de télécommunications avec coûts de déploiement (k€) et statuts de disponibilité.
+Le projet modélise la métropole de **Novapolis** sur la topologie réelle de **Paris & Sud Parisien** (arrondissements 12, 13, 14, Ivry, Kremlin-Bicêtre, Villejuif, jusqu'au **Campus Universitaire Efrei Paris** `SITE_111`).
 
-### Organisation des Fichiers
+### Points Forts du Tableau de Bord Web Neubrutaliste
+- **Design System Neubrutalisme** : Bordures noires franches (`2.5px solid #000`), ombres dures zéro-flou (`4px 4px 0px #000`), micro-interactions tactiles d'enfoncement (`active: translate(2px, 2px)`), palettes néo-vibrantes (Jaune `#FFE600`, Mint `#00F0A0`, Lilas `#E0E7FF`).
+- **Cartographie Réelle Leaflet** : Tuiles officielles **OpenStreetMap Standard** (`tile.openstreetmap.org`), ESRI Canvas, et Google Maps (Plan / Satellite Hybride).
+- **Bouton Direct "Grille d'Évaluation & Barème (20 pts)"** : Permet au jury d'auditer et de tester en un clic les 8 critères officiels du barème avec validation live et temps d'exécution.
+- **Accès Rapide "Caserne Masséna ➔ Campus Efrei"** : Calcul et traçage instantané de l'itinéraire d'urgence optimal via la RN7 avec affichage du retard relatif en cas d'inondation.
+- **Modales d'Analyse Complète** :
+  - **Module 1 (Connexité & DFS/BFS)** : Cycles orientés 3 couleurs, composantes connexes fibre, composantes fortement connexes (Tarjan), culs-de-sac et sites isolés.
+  - **Module 2 (Comparateur de Chemins)** : Comparaison temps réel Dijkstra vs Bellman-Ford vs Floyd-Warshall vs BFS.
+  - **Module 3 (Circuits Absorbants)** : Détection live, bannière clignotante et distinction entre circuit accessible ($-\infty$) et circuit isolé.
+  - **Module 4 (Fibre Kruskal / Prim)** : Preuve formelle d'égalité des coûts minimaux (519.2 k€) et simulation de coupure de câble avec raccordement de secours.
+  - **Module 5 (Matrice de Résilience)** : Évaluation multi-scénarios sur les 5 indicateurs officiels exigés.
+  - **Section 5 (Benchmarks O)** : Visualisation directe des courbes de complexité empiriques vs théoriques.
+
+```bash
+# Lancement instantané du Tableau de Bord Web sur le port 8000
+python main.py --web --port 8000
+```
+Puis ouvrez votre navigateur sur : [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 2. Organisation du Répertoire
 
 ```text
 PROJET_S1/
-├── data/                                # 4 jeux de données documentés
+├── data/                                # 5 jeux de données CSV documentés et validés
 │   ├── manuel/                          # Graphe vérifiable à la main (8 sites)
-│   ├── realiste/                        # Graphe urbain complet (110 sites, 5 districts)
-│   ├── synthetique/                     # Grand réseau d'échelle (1000 sites, seed=42)
+│   ├── realiste/                        # Graphe urbain complet (111 sites, avec Efrei Paris)
+│   ├── synthetique/                     # Réseau d'échelle (1000 sites, seed=42)
 │   ├── test_absorbant_accessible/       # Circuit absorbant accessible depuis la source
 │   └── test_absorbant_non_accessible/   # Circuit absorbant non accessible depuis la source
 ├── output/                              # Graphiques scientifiques et animations générés
@@ -28,107 +48,99 @@ PROJET_S1/
 │   ├── demo_dijkstra.gif
 │   ├── comparaison_avant_apres.png
 │   └── reparation_fibre.png
-├── src/                                 # Modules algorithmiques indépendants
+├── screenshots/                         # Captures d'écran du Dashboard Web Neubrutaliste
+├── src/                                 # Modules algorithmiques purs (0 NetworkX)
 │   ├── data_manager.py                  # Modèles de graphes, validation CSV, clonage strict
 │   ├── generator.py                     # Générateur déterministe des jeux de test
 │   ├── accessibility.py                 # Module 1 : DFS, BFS, composantes, cycles orientés
 │   ├── shortest_paths.py                # Modules 2 & 3 : Dijkstra, Bellman-Ford, Floyd-Warshall
 │   ├── spanning_tree.py                 # Module 4 : Union-Find, Kruskal, Prim, réparation
 │   ├── resilience.py                    # Module 5 : KPIs et comparaison multi-scénarios
-│   ├── benchmarks.py                    # Protocole de benchmark (5 répétitions, graines fixées)
-│   └── visualizer.py                    # Bonus visuel : Animation d'exploration sur carte
+│   ├── benchmarks.py                    # Protocole scientifique (5 runs, seed fixée 42)
+│   ├── visualizer.py                    # Rendu graphique et animation d'itinéraires
+│   └── web_dashboard.py                 # Serveur HTTP/JSON & Dashboard Neubrutaliste complet
 ├── tests/
-│   └── test_all.py                      # Suite complète de tests automatisés (unittest)
-├── main.py                              # Interface en ligne de commande (CLI)
-├── notebook_projet.ipynb                # Notebook Jupyter intégrant l'ensemble des modules
-└── README.md                            # Documentation complète et analyse mathématique
+│   ├── test_all.py                      # 17 tests d'intégration des 5 modules
+│   └── test_graphe.py                   # 11 tests unitaires bas niveau
+├── main.py                              # CLI unifié (--cli, --web, --benchmark, etc.)
+├── notebook_projet.ipynb                # Rapport académique Jupyter complet
+├── PROJET_NOVAPOLIS_RAPPORT.ipynb       # Copie conforme pour le rendu académique
+├── SOUTENANCE_ORALE_12MIN.md            # Guide minuté de soutenance (12 min + Q&A)
+└── README.md                            # Documentation complète du projet
 ```
 
 ---
 
-## 2. Synthèse des Algorithmes et Complexités Théoriques
+## 3. Synthèse des Algorithmes et Complexités Théoriques
 
-| Module | Algorithme | Structure de Données | Complexité Théorique | Rôle dans Novapolis |
+| Module | Algorithme | Structure de Données | Complexité Théorique | Application dans Novapolis |
 | :--- | :--- | :--- | :--- | :--- |
-| **Module 1** | **DFS** (Parcours en profondeur) | Pile / Récursion | $\mathcal{O}(\|V\| + \|E\|)$ | Détection de cycles, composantes fortement connexes (Tarjan) |
-| **Module 1** | **BFS** (Parcours en largeur) | File FIFO (`collections.deque`) | $\mathcal{O}(\|V\| + \|E\|)$ | Itinéraire minimisant le nombre d'arcs, composantes fibre |
-| **Module 2** | **Dijkstra** | Tas binaire (`heapq`) | $\mathcal{O}((\|V\| + \|E\|) \log \|V\|)$ | Itinéraire optimal des secours (poids non négatifs) |
-| **Module 2** | **Bellman-Ford** | Tableau de relaxation | $\mathcal{O}(\|V\| \cdot \|E\|)$ | Itinéraires avec coûts arbitraires et détection de cycles négatifs |
-| **Module 2** | **Floyd-Warshall** | Matrices 2D ($n \times n$) | $\mathcal{O}(\|V\|^3)$ | Plus courts chemins toutes paires et cycles négatifs diagonaux |
-| **Module 4** | **Kruskal** | Tri rapide + Union-Find | $\mathcal{O}(\|E\| \log \|E\|)$ | Arbre couvrant minimal (MST) et forêt de fibre optique |
-| **Module 4** | **Prim** | Tas binaire (`heapq`) | $\mathcal{O}(\|E\| \log \|V\|)$ | Alternative MST efficace sur graphes denses |
-| **Module 4** | **Réparation de panne** | Parcours de coupe bicolore | $\mathcal{O}(\|V\| + \|E\|)$ | Raccordement optimal après coupure d'un câble fibre |
+| **Module 1** | **DFS** (Parcours en profondeur) | Pile d'appels récursive | $\mathcal{O}(\|V\| + \|E\|)$ | Détection de cycles (3 couleurs), composantes fortement connexes (Tarjan) |
+| **Module 1** | **BFS** (Parcours en largeur) | File FIFO (`collections.deque`) | $\mathcal{O}(\|V\| + \|E\|)$ | Itinéraire à nombre d'arcs minimal, composantes connexes non orientées |
+| **Module 2** | **Dijkstra** | Tas binaire (`heapq`) | $\mathcal{O}((\|V\| + \|E\|) \log \|V\|)$ | Plus court chemin en temps pour véhicules d'urgence (poids $\ge 0$) |
+| **Module 2** | **Bellman-Ford** | Relaxation successive de vecteurs | $\mathcal{O}(\|V\| \cdot \|E\|)$ | Chemins avec poids arbitraires et détection de cycles négatifs |
+| **Module 2** | **Floyd-Warshall** | Matrices 2D ($n \times n$) | $\mathcal{O}(\|V\|^3)$ | Plus courts chemins toutes paires et détection de diagonales négatives |
+| **Module 3** | **Propagation $-\infty$** | BFS sélectif depuis cycles absorbants | $\mathcal{O}(\|V\| + \|E\|)$ | Identification exacte des sommets impactés par un circuit absorbant |
+| **Module 4** | **Kruskal** | Tri rapide + Union-Find (rang & compression) | $\mathcal{O}(\|E\| \log \|E\|)$ | Arbre couvrant minimal (MST) pour le réseau fibre optique |
+| **Module 4** | **Prim** | File de priorité / Tas binaire (`heapq`) | $\mathcal{O}(\|E\| \log \|V\|)$ | Alternative d'arbre couvrant minimal optimisée pour graphes denses |
+| **Module 4** | **Coupe Bicolore** | BFS bicolore + recherche d'arête minimale | $\mathcal{O}(\|V\| + \|E\|)$ | Raccordement d'urgence optimal après rupture d'un câble fibre |
+| **Module 5** | **Évaluateur Résilience** | Modélisation multi-scénarios sur clones | $\mathcal{O}(S \cdot (\|V\|+\|E\| \log \|V\|))$ | Calcul des 5 métriques exigées sous 4 scénarios de crise |
 
 ---
 
-## 3. Justifications Algorithmiques & Spécifications Métier
+## 4. Spécifications Métier & Justifications Théoriques
 
-### 3.1 Distinction Rigoureuse des Notions de Connexité (Module 1)
-Pour un réseau routier orienté :
-- **Connexité ordinaire (faible)** : Deux sommets sont reliés sans tenir compte du sens des flèches.
-- **Accessibilité depuis une source** : Ensemble des sommets $v$ atteignables depuis une caserne $s$ en suivant les arcs orientés ouverts.
-- **Connexité forte (SCC / CFC)** : Tout sommet peut atteindre n'importe quel autre sommet en suivant les sens autorisés.
+### 4.1 Connexité Routière vs Connexité Fibre (Module 1)
+- Le **réseau routier** est **orienté** : la présence d'une voie de $u$ vers $v$ n'implique pas la réciproque (sens uniques). Nous analysons l'accessibilité orientée $s \rightsquigarrow v$ et la forte connexité (Tarjan).
+- Le **réseau fibre** est **non-orienté** : les liaisons physiques sont bidirectionnelles. Nous mesurons le nombre de composantes connexes (1 composante en état normal).
 
-### 3.2 Gestion des Circuits Absorbants (Module 3)
-Un circuit absorbant (somme des poids strictement négative) rend le calcul de plus court chemin mathématiquement instable ($-\infty$).
-- **Cas 1 (Accessible)** : Si le cycle est atteignable depuis la source, le programme propage $-\infty$ (`float('-inf')`) à tous les sommets de son bassin d'attraction et refuse d'afficher une distance finie trompeuse.
-- **Cas 2 (Non accessible)** : Si le cycle négatif se situe dans une composante disjointe, Bellman-Ford calcule les distances exactes pour les sommets accessibles et signale l'existence globale du cycle sans corrompre les résultats valides.
+### 4.2 Traitement des Circuits Absorbants (Module 3)
+Un circuit absorbant (somme des poids $< 0$) rend le problème du plus court chemin mal posé ($-\infty$).
+- **Cycle accessible depuis la source** : Bellman-Ford détecte le cycle à la $|V|$-ième étape. Une propagation BFS assigne `float('-inf')` à tous les sommets atteignables depuis ce cycle.
+- **Cycle non accessible depuis la source** : Si le cycle est dans une composante disjointe, il n'altère pas les distances des secours. Les distances réelles sont calculées et affichées, et une alerte signale la présence du cycle isolé.
 
-### 3.3 Gestion des Coûts Égaux et Multiplicité des Arbres Couvrants (Module 4)
-Lorsque plusieurs liaisons de fibre présentent le même coût de pose, le choix de l'arête franchissant la coupe peut différer entre Kruskal et Prim selon l'ordre de tri et la topologie d'exploration. Le poids total minimal obtenu est rigoureusement identique, mais la topologie de l'arbre peut différer.
+### 4.3 Multiplicité des Arbres Couvrants et Égalité des Coûts (Module 4)
+- Lorsque plusieurs arêtes possèdent le même coût en k€, Kruskal et Prim peuvent choisir des arêtes différentes si les ordres de tri ou de parcours diffèrent.
+- **Résultat formel** : Le coût total minimal est rigoureusement identique (**519.2 k€** sur le jeu réaliste).
 
 ---
 
-## 4. Guide d'Exécution
+## 5. Guide d'Exécution & Commandes CLI
 
-### 4.1 Modes Interactifs en Temps Réel (Recommandé pour la démonstration)
-
-Le projet propose **trois modes interactifs** permettant de choisir les scénarios et de visualiser les résultats en direct sans se limiter à des fichiers PNG statiques :
-
-1. **Tableau de bord Web Interactif (HTML5 / Canvas / Zéro dépendance externe)** :
-   ```bash
-   python main.py --web
-   ```
-   * Ouvrez votre navigateur sur `http://localhost:8000`.
-   * Permet de choisir interactivement le jeu de données et le scénario de crise via des menus déroulants.
-   * Carte vectorielle avec **zoom à la molette**, **déplacement panoramique (Pan)** et **survol/clic sur les sites**.
-   * Animation fluide du véhicule de secours circulant le long du réseau en temps réel.
-   * Affichage dynamique des temps de parcours, retards subis et coupures de routes en rouge pointillé.
-
-2. **Menu Console Interactif (CLI)** :
-   ```bash
-   python main.py --interactive
-   ```
-   * Menu textuel interactif permettant de changer de réseau, de tester n'importe quelle intervention et d'ouvrir une fenêtre Matplotlib interactive native.
-
-3. **Intégration directe dans Jupyter Notebook** :
-   Ouvrez le notebook :
-   ```bash
-   jupyter notebook notebook_projet.ipynb
-   ```
-   La cellule dédiée lance le serveur local en arrière-plan et intègre le tableau de bord interactif directement au cœur du notebook via un `IFrame`.
-
-### 4.2 Ligne de Commande Classique (CLI `main.py`)
-
+### 5.1 Lancement du Serveur Web (Recommandé)
 ```bash
-# Diagnostic d'accessibilité sur le jeu réaliste
+python main.py --web --port 8000
+```
+Accès : [http://localhost:8000](http://localhost:8000)
+
+### 5.2 Ligne de Commande Classique
+```bash
+# Diagnostic topologique (Module 1)
 python main.py --data data/realiste --operation diagnostic
 
-# Évaluation des itinéraires des secours lors de la fermeture d'un pont
+# Évaluation des itinéraires des secours (Module 2)
 python main.py --data data/realiste --scenario scenario_fermeture_pont --operation itineraires
 
-# Comparaison globale des scénarios de résilience
+# Comparaison des scénarios de résilience (Module 5)
 python main.py --data data/realiste --operation resilience
 
 # Exécution complète de tous les modules sur le jeu manuel
 python main.py --data data/manuel --operation all
 
-# Lancement des benchmarks scientifiques (génération des 3 graphiques PNG)
+# Lancement des benchmarks scientifiques (Module 5 & Section 5)
 python main.py --operation benchmark
 ```
 
-### 4.3 Lancement des Tests Automatisés
-
+### 5.3 Lancement de la Suite de Tests Automatisés (31 Tests)
 ```bash
-python -m unittest tests/test_all.py -v
+python -m unittest discover tests -v
 ```
+*Taux de réussite : **100 %** (31/31 tests réussis en 0.12 s).*
+
+---
+
+## 6. Documents Pédagogiques & Rendu Académique
+
+- **[SOUTENANCE_ORALE_12MIN.md](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/SOUTENANCE_ORALE_12MIN.md)** : Guide exhaustif pour la soutenance orale de 12 minutes avec minutage précis, répliques types et foire aux questions pièges du jury.
+- **[notebook_projet.ipynb](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/notebook_projet.ipynb)** : Notebook Jupyter interactif intégrant le code, les visualisations, les benchmarks et les démonstrations.
+- **[PROJET_NOVAPOLIS_RAPPORT.ipynb](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/PROJET_NOVAPOLIS_RAPPORT.ipynb)** : Copie conforme du rapport interactif prêt pour évaluation.
