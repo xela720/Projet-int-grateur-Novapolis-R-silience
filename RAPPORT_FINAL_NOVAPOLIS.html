@@ -15,10 +15,16 @@ h3 { font-size: 12.5pt; margin: 12px 0 5px; color: #087f5b; }
 p { margin: 5px 0 8px; }
 ul, ol { margin: 4px 0 8px 20px; }
 li { margin: 2px 0; }
-.cover { background: linear-gradient(135deg,#fff8c5 0 48%,#d9fff0 48% 100%); padding: 28mm 18mm; border: 4px solid #111; box-shadow: 8px 8px 0 #111; }
-.cover h1 { font-size: 34pt; max-width: 150mm; }
-.subtitle { font-size: 16pt; max-width: 145mm; margin: 18px 0 30px; }
-.meta { background: #fff; border: 2px solid #111; padding: 13px; max-width: 145mm; }
+.cover { height: 265mm; min-height: 0; overflow: hidden; background: linear-gradient(135deg,#fff8c5 0 48%,#d9fff0 48% 100%); padding: 20mm 18mm 15mm; border: 4px solid #111; box-shadow: 8px 8px 0 #111; }
+.cover h1 { font-size: 31pt; max-width: 150mm; margin-bottom: 8px; }
+.cover .subtitle { font-size: 13.5pt; max-width: 145mm; margin: 10px 0 16px; }
+.cover .meta { background: #fff; border: 2px solid #111; padding: 10px 12px; max-width: 145mm; }
+.cover .meta p { margin: 4px 0 6px; }
+.cover img { max-height: 70mm; margin: 8px auto 4px; }
+.cover .caption { margin-top: 0; }
+.authors { display: flex; gap: 8px; margin: 10px 0 12px; max-width: 145mm; }
+.author { flex: 1; background: #111827; color: #fff; border: 2px solid #111; padding: 7px 9px; font-size: 10.5pt; }
+.academic-line { font-size: 10pt; font-weight: bold; letter-spacing: .2px; }
 .tag { display:inline-block; padding: 4px 7px; margin: 2px 3px 2px 0; border: 2px solid #111; background:#ffe600; font-weight:bold; }
 .kpi-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:8px; margin: 12px 0; }
 .kpi { border:2px solid #111; padding:8px; background:#f7fafc; min-height:58px; }
@@ -35,24 +41,29 @@ img { max-width:100%; max-height: 105mm; display:block; margin:8px auto; object-
 .caption { text-align:center; font-size:8.5pt; color:#52606d; margin-top:-3px; }
 .small { font-size:8.8pt; color:#52606d; }
 code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
-.footer { position:absolute; bottom:0; left:0; right:0; border-top:1px solid #c8d0d8; padding-top:4px; color:#697586; font-size:8pt; }
+.footer { position:absolute; bottom:0; left:0; right:0; border-top:1px solid #c8d0d8; padding-top:4px; color:#697586; font-size:8pt; display:flex; justify-content:space-between; }
 .equation { background:#111827; color:#fff; padding:8px 12px; font-family: Georgia, serif; margin:8px 0; }
 </style>
 </head>
 <body>
 
 <section class="page cover">
+  <div class="academic-line">EFREI Paris · Projet intégrateur d’algorithmique et théorie des graphes</div>
   <div class="tag">RAPPORT FINAL</div><div class="tag">NOVAPOLIS RÉSILIENCE</div>
   <h1>Planification des secours et réseau urbain résilient</h1>
-  <p class="subtitle">Méthodes, résultats, limites et recommandations à partir des notebooks Jupyter, de la documentation Markdown et des preuves visuelles du dashboard.</p>
+  <p class="subtitle">Méthodes, résultats, limites et recommandations pour l’analyse d’un réseau urbain résilient.</p>
+  <div class="authors">
+    <div class="author"><strong>Alexandre PIANA</strong><br>BDLM1</div>
+    <div class="author"><strong>Huu loc TRAN</strong><br>BDLM1</div>
+  </div>
   <div class="meta">
-    <p><strong>Projet intégrateur — Algorithmique et théorie des graphes</strong></p>
-    <p>Étude appliquée à un réseau urbain inspiré de Paris et du Sud parisien, avec routage d’urgence, réseau fibre, scénarios de crise et supervision cartographique.</p>
-    <p><strong>Périmètre documentaire :</strong> <code>README.md</code>, <code>RAPPORT_AUDIT_QA.md</code>, <code>SOUTENANCE_ORALE_12MIN.md</code>, notebooks Jupyter, jeux de données, graphiques et captures du répertoire <code>screenshots/</code>.</p>
+    <p><strong>Problématique :</strong> modéliser les itinéraires de secours et la résilience d’infrastructures urbaines par la théorie des graphes.</p>
+    <p>Le rapport présente la modélisation, les algorithmes de parcours et de plus courts chemins, l’analyse des scénarios de crise, les arbres couvrants minimaux et l’évaluation de la résilience.</p>
+    <p><strong>Livrable académique :</strong> étude documentée, résultats expérimentaux, validation logicielle et recommandations.</p>
   </div>
   <img src="screenshots/23_novapolis_taste_masterpiece.png" alt="Dashboard Novapolis">
   <p class="caption">Figure 1 — Vue de démonstration du dashboard Novapolis.</p>
-  <div class="footer">Novapolis Résilience · Rapport final · 2026</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>2026</span></div>
 </section>
 
 <section class="page">
@@ -75,7 +86,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
   <div class="callout"><strong>Conclusion synthétique :</strong> le projet démontre la faisabilité d’un système transparent, testable et pédagogique, mais ses résultats doivent encore être calibrés sur des données de trafic, de capacité et de disponibilité réellement opérationnelles avant tout usage de crise.</div>
   <h3>Question directrice</h3>
   <p>Comment combiner la garantie mathématique des algorithmes de graphes avec une représentation cartographique suffisamment concrète pour aider un opérateur à comprendre, comparer et justifier une décision de secours ?</p>
-  <div class="footer">1 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>1 / 12</span></div>
 </section>
 
 <section class="page">
@@ -96,7 +107,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
     <div><img src="screenshots/01_dijkstra_voirie_reelle.png" alt="Voirie réelle"><p class="caption">Figure 3 — Itinéraire sur la voirie.</p></div>
   </div>
   <div class="callout"><strong>Reproductibilité :</strong> les jeux synthétiques utilisent une graine fixée à 42 ; les scénarios sont appliqués sur des clones afin d’éviter la pollution de l’état nominal.</div>
-  <div class="footer">2 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>2 / 12</span></div>
 </section>
 
 <section class="page">
@@ -114,7 +125,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
     <div><img src="output/benchmark_plus_courts_chemins.png" alt="Benchmark plus courts chemins"><p class="caption">Figure 4 — Comparaison empirique des chemins.</p></div>
     <div><img src="output/benchmark_arbres_couvrants.png" alt="Benchmark arbres couvrants"><p class="caption">Figure 5 — Comparaison des arbres couvrants.</p></div>
   </div>
-  <div class="footer">3 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>3 / 12</span></div>
 </section>
 
 <section class="page">
@@ -135,7 +146,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
     <div><img src="screenshots/41_dashboard_sober_academique_sans_emojis.png" alt="Dashboard académique"><p class="caption">Figure 6 — Version sobre pour l’évaluation.</p></div>
     <div><img src="screenshots/42_tooltip_zindex_repare.png" alt="Tooltip réparé"><p class="caption">Figure 7 — Correction d’affichage des infobulles.</p></div>
   </div>
-  <div class="footer">4 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>4 / 12</span></div>
 </section>
 
 <section class="page">
@@ -153,7 +164,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
   <p class="caption">Figure 8 — Itinéraire de référence sur la carte réelle.</p>
   <h3>Interprétation</h3>
   <p>Le taux d’accès est élevé mais non parfait. Les 5,5 % de demandes ou sites non couverts ne doivent pas être masqués : ils constituent précisément les cas à traiter dans un plan de renforcement, par ajout de liaisons, repositionnement d’une ressource ou adaptation des priorités.</p>
-  <div class="footer">5 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>5 / 12</span></div>
 </section>
 
 <section class="page">
@@ -172,7 +183,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
   </div>
   <h3>Lecture opérationnelle</h3>
   <p>La fermeture de pont agit principalement sur la connectivité : certaines demandes deviennent impossibles. L’inondation conserve l’accessibilité mais dégrade le temps de réponse. Cette différence justifie une stratégie à deux indicateurs : disponibilité binaire et performance temporelle.</p>
-  <div class="footer">6 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>6 / 12</span></div>
 </section>
 
 <section class="page">
@@ -186,7 +197,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
   <div class="callout warn"><strong>Point de vigilance :</strong> un résultat « aucun câble de remplacement » doit être présenté comme une alerte de résilience, pas comme un succès de réparation. La procédure métier doit distinguer reconnexion automatique, absence de candidat et réparation manuelle.</div>
   <h3>Recommandation technique</h3>
   <p>Ajouter au résultat de réparation : le nom du dataset, l’arête supprimée, les composantes obtenues, la liste des candidats franchissant la coupe et la raison d’un éventuel échec. Cela rend la preuve auditable et évite les interprétations ambiguës.</p>
-  <div class="footer">7 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>7 / 12</span></div>
 </section>
 
 <section class="page">
@@ -211,7 +222,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
     <li>Une capture visuelle prouve l’affichage, mais pas la justesse de la géométrie ni la disponibilité réseau.</li>
   </ul>
   <div class="callout"><strong>Recommandation UX :</strong> conserver un mode « opérateur » réduit à l’itinéraire, au statut d’accessibilité, au retard et à l’horodatage ; réserver les détails algorithmiques au mode « audit ».</div>
-  <div class="footer">8 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>8 / 12</span></div>
 </section>
 
 <section class="page">
@@ -229,7 +240,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
     <tr><td><strong>Font Awesome</strong></td><td>Icônes de navigation et de statut.</td><td>Vérifier licence, chargement et accessibilité des libellés.</td></tr>
   </table>
   <div class="callout"><strong>Clarification :</strong> Leaflet, les fournisseurs de tuiles, OSRM, Google Fonts et Font Awesome ne remplacent pas les algorithmes de graphes. Ils rendent le résultat visible ou géographiquement interprétable ; Dijkstra, Bellman-Ford, Floyd-Warshall, Kruskal, Prim, DFS, BFS et Tarjan restent implémentés dans le projet.</div>
-  <div class="footer">9 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>9 / 12</span></div>
 </section>
 
 <section class="page">
@@ -243,7 +254,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
   <h3>Limites de preuve</h3>
   <p>Les captures d’écran valident une expérience à un instant donné. Elles ne remplacent ni les tests de charge, ni la validation de la précision géographique, ni une campagne avec des experts des secours. Les valeurs 7,65 min, 5,81 min, 1 798,0 k€ et 519,2 k€ apparaissent dans des artefacts différents : toute comparaison doit préciser la version du dataset et le contexte d’exécution.</p>
   <div class="callout warn"><strong>Menace principale :</strong> le risque d’une fausse précision. Une valeur décimale bien présentée peut sembler opérationnelle alors qu’elle dépend d’un graphe synthétique, d’un fournisseur externe ou d’un scénario simplifié.</div>
-  <div class="footer">10 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>10 / 12</span></div>
 </section>
 
 <section class="page">
@@ -267,7 +278,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
     <li>Taux d’erreurs cartographiques : géométrie absente, tuile indisponible, service OSRM non joignable.</li>
   </ul>
   <div class="callout"><strong>Décision recommandée :</strong> utiliser Novapolis dès maintenant comme démonstrateur académique et outil de préparation de scénarios ; conditionner tout usage opérationnel à une validation des données, des procédures et des fournisseurs externes.</div>
-  <div class="footer">11 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>11 / 12</span></div>
 </section>
 
 <section class="page">
@@ -286,7 +297,7 @@ code { background:#eef2f5; padding:1px 3px; border-radius:3px; }
   <div class="callout"><strong>Verdict :</strong> plateforme cohérente, testée et convaincante pour l’apprentissage et la préparation de scénarios ; maturité opérationnelle à poursuivre sur les données, la résilience des dépendances externes et la validation terrain.</div>
   <img src="screenshots/43_dataset_absorbant_accessible_scenarios.png" alt="Scénarios absorbants">
   <p class="caption">Figure 14 — Exemple de visualisation des jeux de scénarios et de leurs alertes.</p>
-  <div class="footer">12 / 12</div>
+  <div class="footer"><span>Alexandre PIANA · Huu loc TRAN · BDLM1</span><span>12 / 12</span></div>
 </section>
 
 </body>
