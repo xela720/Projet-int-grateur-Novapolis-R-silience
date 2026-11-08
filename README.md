@@ -2,8 +2,6 @@
 
 > **Auteurs :** TRAN Huu Loc & PIANA Alexandre  
 > **Projet Intégrateur Majeur d'Algorithmique et Théorie des Graphes (EFREI Paris - S1 BDML)**  
-> **Cadre :** Projet académique conforme au cahier des charges officiel 
-> **Architecture :** 100 % Python Standard — **Strictement zéro bibliothèque externe de graphes**.
 
 ---
 
