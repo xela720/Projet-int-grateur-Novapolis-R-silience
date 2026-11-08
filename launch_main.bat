@@ -1,1 +1,1 @@
-python main.py --web --port 8000
+ .\.venv\Scripts\python.exe main.py --web --port 8000
