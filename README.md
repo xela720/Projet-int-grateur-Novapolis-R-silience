@@ -1,5 +1,6 @@
 # Novapolis Résilience : Planification des Secours et Réseau Urbain Résilient
 
+> **Auteurs :** TRAN Huu Loc & PIANA Alexandre  
 > **Projet Intégrateur Majeur d'Algorithmique et Théorie des Graphes (EFREI Paris - S1 BDML)**  
 > **Cadre :** Projet académique conforme au cahier des charges officiel 
 > **Architecture :** 100 % Python Standard — **Strictement zéro bibliothèque externe de graphes** (aucun usage de NetworkX).
@@ -141,15 +142,6 @@ python -m unittest discover tests -v
 
 ## 6. Rapports et Documents Pédagogiques
 
-### 6.1 Les trois formats du rapport final
-
-- **[RAPPORT_FINAL_NOVAPOLIS.html](RAPPORT_FINAL_NOVAPOLIS.html)** : version web interactive et facilement consultable dans un navigateur. Elle conserve la mise en page, les illustrations et la structure complète du rapport.
-- **[RAPPORT_FINAL_NOVAPOLIS.pdf](RAPPORT_FINAL_NOVAPOLIS.pdf)** : version figée destinée à la lecture, au partage et au dépôt académique. Elle reprend les méthodes, résultats, limites et recommandations sur 13 pages.
-- **[RAPPORT_FINAL_NOVAPOLIS.docx](RAPPORT_FINAL_NOVAPOLIS.docx)** : version Word modifiable, permettant d’ajuster la mise en page, d’ajouter des commentaires ou d’effectuer une nouvelle exportation PDF.
-
-### 6.2 Supports complémentaires
-
+- **[RAPPORT_FINAL_NOVAPOLIS.pdf](RAPPORT_FINAL_NOVAPOLIS.pdf)** : version figée destinée à la lecture. Elle reprend les méthodes, résultats, limites et recommandations sur 13 pages.
 - **[RAPPORT_AUDIT_QA.md](RAPPORT_AUDIT_QA.md)** : rapport de recette présentant les tests fonctionnels, l’évaluation de l’interface, les scénarios de crise vérifiés et les preuves visuelles associées.
-- **[SOUTENANCE_ORALE_12MIN.md](SOUTENANCE_ORALE_12MIN.md)** : guide de préparation de la soutenance orale avec minutage, arguments et questions possibles du jury.
-- **[notebook_projet.ipynb](notebook_projet.ipynb)** : notebook Jupyter de démonstration regroupant les calculs, visualisations, benchmarks et tests.
-- **[PROJET_NOVAPOLIS_RAPPORT.ipynb](PROJET_NOVAPOLIS_RAPPORT.ipynb)** : version notebook du rapport académique interactif, utile pour reproduire les résultats étape par étape.
+- **[PROJET_NOVAPOLIS_RAPPORT.ipynb](PROJET_NOVAPOLIS_RAPPORT.ipynb)** : Notebook Jupyter de démonstration regroupant les calculs, visualisations, benchmarks et tests sans interfaces.
