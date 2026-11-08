@@ -1,6 +1,6 @@
 # Simulation de rapport d'Audit QA & Évaluation Opérationnelle — Novapolis Paris
 
-**Auteur :** TRAN Huu Loc & PIANA Alexandre 
+**Auteur :** TRAN Huu Loc & PIANA Alexandre  
 **Date d'exécution :** 16 Octobre 2026  
 **Application sous test :** Novapolis — Supervision & Résilience des Réseaux Urbains (Paris)  
 **URL cible :** [http://localhost:8000/](http://localhost:8000/)  
