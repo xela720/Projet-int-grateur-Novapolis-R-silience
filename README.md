@@ -141,6 +141,6 @@ python -m unittest discover tests -v
 
 ## 6. Documents Pédagogiques & Rendu Académique
 
-- **[SOUTENANCE_ORALE_12MIN.md](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/SOUTENANCE_ORALE_12MIN.md)** : Guide exhaustif pour la soutenance orale de 12 minutes avec minutage précis, répliques types et foire aux questions pièges du jury.
-- **[notebook_projet.ipynb](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/notebook_projet.ipynb)** : Notebook Jupyter interactif intégrant le code, les visualisations, les benchmarks et les démonstrations.
-- **[PROJET_NOVAPOLIS_RAPPORT.ipynb](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/PROJET_NOVAPOLIS_RAPPORT.ipynb)** : Copie conforme du rapport interactif prêt pour évaluation.
+- **[SOUTENANCE_ORALE_12MIN.md](SOUTENANCE_ORALE_12MIN.md)** : Guide exhaustif pour la soutenance orale de 12 minutes avec minutage précis, répliques types et foire aux questions pièges du jury.
+- **[notebook_projet.ipynb](notebook_projet.ipynb)** : Notebook Jupyter interactif intégrant le code, les visualisations, les benchmarks et les démonstrations.
+- **[PROJET_NOVAPOLIS_RAPPORT.ipynb](PROJET_NOVAPOLIS_RAPPORT.ipynb)** : Copie conforme du rapport interactif prêt pour évaluation.

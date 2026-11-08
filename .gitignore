@@ -31,6 +31,6 @@ ENV/
 Thumbs.db
 desktop.ini
 
-# Agent skills cache (Antigravity local skills)
+# Local agent & skills cache
 .agents/
 skills-lock.json
