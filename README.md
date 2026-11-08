@@ -139,8 +139,16 @@ python -m unittest discover tests -v
 
 ---
 
-## 6. Documents Pédagogiques & Rendu Académique
+## 6. Rapports et Documents Pédagogiques
 
-- **[SOUTENANCE_ORALE_12MIN.md](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/SOUTENANCE_ORALE_12MIN.md)** : Guide exhaustif pour la soutenance orale de 12 minutes avec minutage précis, répliques types et foire aux questions pièges du jury.
-- **[notebook_projet.ipynb](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/notebook_projet.ipynb)** : Notebook Jupyter interactif intégrant le code, les visualisations, les benchmarks et les démonstrations.
-- **[PROJET_NOVAPOLIS_RAPPORT.ipynb](file:///c:/Efrei/APPING1/Graphe/PROJET_S1/PROJET_NOVAPOLIS_RAPPORT.ipynb)** : Copie conforme du rapport interactif prêt pour évaluation.
+### 6.1 Les trois formats du rapport final
+
+- **[RAPPORT_FINAL_NOVAPOLIS.html](RAPPORT_FINAL_NOVAPOLIS.html)** : version web interactive et facilement consultable dans un navigateur. Elle conserve la mise en page, les illustrations et la structure complète du rapport.
+- **[RAPPORT_FINAL_NOVAPOLIS.pdf](RAPPORT_FINAL_NOVAPOLIS.pdf)** : version figée destinée à la lecture, au partage et au dépôt académique. Elle reprend les méthodes, résultats, limites et recommandations sur 13 pages.
+- **[RAPPORT_FINAL_NOVAPOLIS.docx](RAPPORT_FINAL_NOVAPOLIS.docx)** : version Word modifiable, permettant d’ajuster la mise en page, d’ajouter des commentaires ou d’effectuer une nouvelle exportation PDF.
+
+### 6.2 Supports complémentaires
+
+- **[SOUTENANCE_ORALE_12MIN.md](SOUTENANCE_ORALE_12MIN.md)** : guide de préparation de la soutenance orale avec minutage, arguments et questions possibles du jury.
+- **[notebook_projet.ipynb](notebook_projet.ipynb)** : notebook Jupyter de démonstration regroupant les calculs, visualisations, benchmarks et tests.
+- **[PROJET_NOVAPOLIS_RAPPORT.ipynb](PROJET_NOVAPOLIS_RAPPORT.ipynb)** : version notebook du rapport académique interactif, utile pour reproduire les résultats étape par étape.
