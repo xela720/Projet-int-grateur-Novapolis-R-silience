@@ -62,9 +62,9 @@ PROJET_S1/
 │   ├── test_all.py                      # 17 tests d'intégration des 5 modules
 │   └── test_graphe.py                   # 11 tests unitaires bas niveau
 ├── main.py                              # CLI unifié (--cli, --web, --benchmark, etc.)
-├── notebook_projet.ipynb                # Rapport académique Jupyter complet
-├── PROJET_NOVAPOLIS_RAPPORT.ipynb       # Copie conforme pour le rendu académique
-├── SOUTENANCE_ORALE_12MIN.md            # Guide minuté de soutenance (12 min + Q&A)
+├── PROJET_NOVAPOLIS_RAPPORT.ipynb       # Démonstration et tests
+├── PROJET_NOVAPOLIS_RAPPORT.pdf         # Rapport académique complet
+├── PROJET_AUDIT_QA.md                   # Audit professionel
 └── README.md                            # Documentation complète du projet
 ```
 
