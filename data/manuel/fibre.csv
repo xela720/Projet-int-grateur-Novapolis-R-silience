@@ -1,0 +1,10 @@
+u,v,cost,statut
+S1,S2,10.0,actif
+S2,S3,8.0,actif
+S1,S7,6.0,actif
+S2,S4,15.0,actif
+S4,S5,12.0,actif
+S5,S6,7.0,actif
+S6,S7,14.0,actif
+S1,S5,20.0,actif
+S3,S4,11.0,actif

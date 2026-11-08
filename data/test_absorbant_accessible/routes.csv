@@ -1,0 +1,7 @@
+u,v,temps_normal,temps_pointe,statut,type_voie,capacite
+A,B,2.0,2.0,ouvert,artificiel,1000
+B,C,3.0,3.0,ouvert,artificiel,1000
+C,D,-6.0,-6.0,ouvert,artificiel,1000
+D,B,1.0,1.0,ouvert,artificiel,1000
+D,E,2.0,2.0,ouvert,artificiel,1000
+F,G,1.0,1.0,ouvert,artificiel,1000

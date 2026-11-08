@@ -1,0 +1,8 @@
+id,nom,type,longitude,latitude
+A,Source Principale,source,0.0,0.0
+B,Entree Circuit,noeud,1.0,0.0
+C,Sommet Negatif 1,noeud,2.0,1.0
+D,Sommet Negatif 2,noeud,2.0,-1.0
+E,Destination Puits,destination,3.0,0.0
+F,Site Independant 1,autre,5.0,5.0
+G,Site Independant 2,autre,6.0,5.0

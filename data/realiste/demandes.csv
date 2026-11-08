@@ -1,0 +1,16 @@
+id,origine,destination,type,priorite
+DEM_001,SITE_001,SITE_002,urgence_medicale,1
+DEM_002,SITE_001,SITE_027,incendie,1
+DEM_003,SITE_026,SITE_031,secours,2
+DEM_004,SITE_046,SITE_058,inondation,1
+DEM_005,SITE_066,SITE_075,accident,1
+DEM_006,SITE_086,SITE_099,secours,2
+DEM_007,SITE_001,SITE_047,urgence_medicale,1
+DEM_008,SITE_046,SITE_061,secours,2
+DEM_009,SITE_066,SITE_069,incendie,1
+DEM_010,SITE_086,SITE_087,urgence_medicale,1
+DEM_011,SITE_001,SITE_106,renfort,1
+DEM_012,SITE_066,SITE_107,accident,2
+DEM_013,SITE_001,SITE_110,inaccessible_test,1
+DEM_014,SITE_046,SITE_111,urgence_campus_efrei,1
+DEM_015,SITE_001,SITE_111,renfort_commandement,1

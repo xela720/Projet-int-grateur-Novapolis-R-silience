@@ -1,0 +1,5 @@
+id,origine,destination,type,priorite
+D1,S1,S3,incendie,1
+D2,S1,S5,urgence_medicale,1
+D3,S7,S6,accident,2
+D4,S1,S8,secours,1

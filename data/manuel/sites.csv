@@ -1,0 +1,9 @@
+id,nom,type,longitude,latitude
+S1,Caserne Centrale,caserne,2.3,48.85
+S2,Hopital Saint-Paul,hopital,2.32,48.86
+S3,Quartier Nord,quartier,2.31,48.87
+S4,Centre Telecom,telecom,2.34,48.855
+S5,Ecole Victor Hugo,ecole,2.33,48.84
+S6,Quartier Sud,quartier,2.305,48.835
+S7,Caserne Ouest,caserne,2.28,48.85
+S8,Poste Avance Isole,poste_isole,2.37,48.88

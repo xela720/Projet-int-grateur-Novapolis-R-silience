@@ -1,0 +1,11 @@
+scenario_id,type_element,u,v,action,valeur
+scenario_normal,aucun,none,none,baseline,0
+scenario_fermeture_pont,route,SITE_079,SITE_058,fermer,0
+scenario_fermeture_pont,route,SITE_058,SITE_079,fermer,0
+scenario_fermeture_pont,route,SITE_085,SITE_106,fermer,0
+scenario_panne_fibre_dorsale,fibre,SITE_001,SITE_003,panne,0
+scenario_panne_fibre_dorsale,fibre,SITE_003,SITE_028,panne,0
+scenario_inondation_sud,route,SITE_075,SITE_061,fermer,0
+scenario_inondation_sud,route,SITE_061,SITE_075,fermer,0
+scenario_inondation_sud,route,SITE_058,SITE_047,fermer,0
+scenario_inondation_sud,fibre,SITE_001,SITE_048,panne,0

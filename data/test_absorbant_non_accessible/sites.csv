@@ -1,0 +1,7 @@
+id,nom,type,longitude,latitude
+A,Source,source,0.0,0.0
+B,Etape B,noeud,1.0,0.0
+C,Destination C,destination,2.0,0.0
+X,Cycle X,cycle_isole,10.0,10.0
+Y,Cycle Y,cycle_isole,11.0,11.0
+Z,Cycle Z,cycle_isole,10.0,12.0
