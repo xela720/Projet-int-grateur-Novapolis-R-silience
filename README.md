@@ -63,8 +63,8 @@ PROJET_S1/
 │   └── test_graphe.py                   # 11 tests unitaires bas niveau
 ├── main.py                              # CLI unifié (--cli, --web, --benchmark, etc.)
 ├── PROJET_NOVAPOLIS_RAPPORT.ipynb       # Démonstration et tests
-├── PROJET_NOVAPOLIS_RAPPORT.pdf         # Rapport académique complet
-├── PROJET_AUDIT_QA.md                   # Audit professionel
+├── RAPPORT_FINAL_NOVAPOLIS.pdf          # Rapport académique complet
+├── RAPPORT_AUDIT_QA.md                  # Audit professionel
 └── README.md                            # Documentation complète du projet
 ```
 
