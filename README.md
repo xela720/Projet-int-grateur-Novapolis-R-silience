@@ -1,7 +1,7 @@
 # Novapolis Résilience : Planification des Secours et Réseau Urbain Résilient
 
 > **Projet Intégrateur Majeur d'Algorithmique et Théorie des Graphes (EFREI Paris - S1 BDML)**  
-> **Cadre :** Projet académique conforme au cahier des charges officiel (`PROJET.pdf` — Barème 20 points)  
+> **Cadre :** Projet académique conforme au cahier des charges officiel 
 > **Architecture :** 100 % Python Standard — **Strictement zéro bibliothèque externe de graphes** (aucun usage de NetworkX).
 
 ---

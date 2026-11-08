@@ -1,6 +1,6 @@
-# Rapport d'Audit QA & Évaluation Opérationnelle — Novapolis Paris
+# Simulation de rapport d'Audit QA & Évaluation Opérationnelle — Novapolis Paris
 
-**Auteur :** Ingénieur QA & Testeur d'Interface Senior  
+**Auteur :** TRAN Huu Loc & PIANA Alexandre 
 **Date d'exécution :** 16 Octobre 2026  
 **Application sous test :** Novapolis — Supervision & Résilience des Réseaux Urbains (Paris)  
 **URL cible :** [http://localhost:8000/](http://localhost:8000/)  
@@ -169,10 +169,10 @@ Suite à l'audit critique et à l'analyse fine des positions spatiales, une refo
 
 ---
 
-## 6. Conclusion Finale & Conformité Académique (Barème 20 points)
+## 6. Conclusion Finale
 
 L'audit confirme que **Novapolis** répond à 100% des exigences du cahier des charges :
-- **Pureté algorithmique :** Zéro dépendance à des bibliothèques de graphes externes (pas de NetworkX). Tout est implémenté en Python standard (`heapq`, `collections`, `csv`, `math`).
+- **Pureté algorithmique :** Zéro dépendance à des bibliothèques de graphes externes. Tout est implémenté en Python standard (`heapq`, `collections`, `csv`, `math`).
 - **Exactitude géographique :** Référencement cadastral WGS84 réel et topologie fluviale contrainte par les ponts de la Seine.
 - **Richesse fonctionnelle :** 5 modules validés sans anomalie (Accessibilité, Itinéraires, Circuits absorbants, Fibre MST & panne, Matrice de résilience).
-- **Valeur ajoutée démonstrative :** Interface interactive avec bascule voirie réelle / graphe topologique, et mode démonstration animé pour la soutenance orale.
+- **Valeur ajoutée démonstrative :** Interface interactive avec bascule voirie réelle / graphe topologique.
