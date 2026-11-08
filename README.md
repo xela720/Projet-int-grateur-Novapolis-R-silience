@@ -22,10 +22,12 @@ Le projet modélise la métropole de **Novapolis** sur la topologie réelle de *
   - **Module 5 (Matrice de Résilience)** : Évaluation multi-scénarios sur les 5 indicateurs officiels exigés.
   - **Section 5 (Benchmarks O)** : Visualisation directe des courbes de complexité empiriques vs théoriques.
 
-Si vous utilisez Windows ouvrer le fichier launch_main.bat.
+### Lancement instantané du Tableau de Bord Web sur le port 8000
 
+Si vous utilisez Windows ouvrer le fichier `launch_main.bat`.
+
+Sinon : 
 ```bash
-# Lancement instantané du Tableau de Bord Web sur le port 8000
 python main.py --web --port 8000
 ```
 Si erreur python : 
