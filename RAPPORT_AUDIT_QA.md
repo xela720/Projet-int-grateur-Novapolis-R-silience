@@ -35,7 +35,7 @@ La plateforme **Novapolis Paris** a fait l'objet d'une campagne complète de tes
   - Journal des étapes : Trajet optimal en 1 segment topologique reliant directement le pôle Châtelet à Lariboisière.
   - Résolution géométrique : Intégration transparente avec le moteur OSRM (Open Source Routing Machine) produisant une polyligne de **433 coordonnées GPS** qui épouse fidèlement le boulevard de Sébastopol, le boulevard de Strasbourg et la rue de Maubeuge.
 
-![Itinéraire d'urgence en voirie réelle](file:///C:/Users/lochu/.gemini/antigravity/brain/0beb7e1f-8e41-4b6c-8403-d3d87c6fa1e2/screenshots/01_dijkstra_voirie_reelle.png)
+![Itinéraire d'urgence en voirie réelle](screenshots/01_dijkstra_voirie_reelle.png)
 
 ---
 
@@ -47,11 +47,13 @@ La plateforme **Novapolis Paris** a fait l'objet d'une campagne complète de tes
   2. Bascule du bouton **"Voirie réelle (Rues)"** (`#btn-voirie`) vers le mode abstrait :
      - Le tracé vert passe d'un ensemble de 433 coordonnées suivant les rues à un **segment droit pur (2 points)** reliant les deux sommets.
 
-````carousel
-![Réseau global des 424 arcs du graphe topologique](file:///C:/Users/lochu/.gemini/antigravity/brain/0beb7e1f-8e41-4b6c-8403-d3d87c6fa1e2/screenshots/02_arcs_du_graphe.png)
-<!-- slide -->
-![Tracé topologique direct (vol d'oiseau) traversant le bâti](file:///C:/Users/lochu/.gemini/antigravity/brain/0beb7e1f-8e41-4b6c-8403-d3d87c6fa1e2/screenshots/02b_vol_doiseau_comparaison.png)
-````
+![Réseau global des 424 arcs du graphe topologique](screenshots/02_arcs_du_graphe.png)
+
+*Figure A : Réseau global des 424 arcs du graphe topologique.*
+
+![Tracé topologique direct (vol d'oiseau) traversant le bâti](screenshots/02b_vol_doiseau_comparaison.png)
+
+*Figure B : Tracé topologique direct (vol d'oiseau) traversant le bâti.*
 
 ---
 
@@ -61,14 +63,14 @@ La plateforme **Novapolis Paris** a fait l'objet d'une campagne complète de tes
   - Affichage : L'axe coupé s'affiche distinctement en rouge pointillé épais (`#e5484d`, tirets `6,6`).
   - Diagnostic : `SITE_106` devient inaccessible depuis la rive nord (taux d'échec d'urgence de 15.38% sur le quartier).
 
-![Scénario Fermeture de Pont](file:///C:/Users/lochu/.gemini/antigravity/brain/0beb7e1f-8e41-4b6c-8403-d3d87c6fa1e2/screenshots/03_scenario_fermeture_pont.png)
+![Scénario Fermeture de Pont](screenshots/03_scenario_fermeture_pont.png)
 
 - **Scénario 3B — Inondation Sud (`scenario_inondation_sud`) :**
   - Axe principal direct submergé entre `SITE_001` (Châtelet) et `SITE_048` (Hub Télécom Sud).
   - Recalcul de l'itinéraire : Dijkstra identifie un contournement obligatoire par `SITE_069` (Lycée Hélène Boucher).
   - Télémétrie : La durée de trajet passe à **14.31 min**, avec un retard de **+9.6 min** signalé par le badge rouge d'alerte critique (`status-alert`).
 
-![Scénario Inondation Sud avec contournement et retard de +9.6 min](file:///C:/Users/lochu/.gemini/antigravity/brain/0beb7e1f-8e41-4b6c-8403-d3d87c6fa1e2/screenshots/03b_scenario_inondation_retard.png)
+![Scénario Inondation Sud avec contournement et retard de +9.6 min](screenshots/03b_scenario_inondation_retard.png)
 
 ---
 
@@ -82,7 +84,7 @@ La plateforme **Novapolis Paris** a fait l'objet d'une campagne complète de tes
     `Raccordement de secours : SITE_002 ↔ SITE_005 (+12 k€, surcoût +4 k€)`.
   - Notification opérateur générée avec confirmation des montants d'investissement.
 
-![Simulation de coupure fibre et déploiement du câble de secours](file:///C:/Users/lochu/.gemini/antigravity/brain/0beb7e1f-8e41-4b6c-8403-d3d87c6fa1e2/screenshots/04_fibre_coupure_secours.png)
+![Simulation de coupure fibre et déploiement du câble de secours](screenshots/04_fibre_coupure_secours.png)
 
 ---
 
@@ -101,7 +103,7 @@ La plateforme **Novapolis Paris** a fait l'objet d'une campagne complète de tes
 
   - Fermeture de la modale via le bouton `×` et clic extérieur validés.
 
-![Matrice comparative de résilience multiscénario](file:///C:/Users/lochu/.gemini/antigravity/brain/0beb7e1f-8e41-4b6c-8403-d3d87c6fa1e2/screenshots/05_matrice_resilience_multiscenario.png)
+![Matrice comparative de résilience multiscénario](screenshots/05_matrice_resilience_multiscenario.png)
 
 ---
 
@@ -164,8 +166,12 @@ Suite à l'audit critique et à l'analyse fine des positions spatiales, une refo
    - Aucune traversée fictive ou "magique" de la Seine n'est permise.
 
 3. **Captures d'Écran de Preuve :**
-   - `screenshots/08_chatelet_hotel_dieu_cadastral.png` : Alignement cadastral métrique sur Google Maps.
-   - `screenshots/09_itineraire_chatelet_lariboisiere.png` : Itinéraire Châtelet vers Lariboisière via les Boulevards de Sébastopol et de Strasbourg.
+   
+![Alignement cadastral métrique sur Google Maps.](screenshots/08_chatelet_hotel_dieu_cadastral.png)
+*Figure C : Alignement cadastral métrique sur Google Maps.*
+
+![Itinéraire Châtelet vers Lariboisière via les Boulevards de Sébastopol et de Strasbourg.](screenshots/09_itineraire_chatelet_lariboisiere.png)
+*Figure D : Itinéraire Châtelet vers Lariboisière via les Boulevards de Sébastopol et de Strasbourg.*
 
 ---
 
